@@ -4,39 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Motapa Mapo Yantra</title>
+    <link rel="stylesheet" href="style.css">    
 </head>
 <body>
-    <h1>Motapa Mapo Yantra</h1>
-    <div>
+    <h1 style="display: flex; justify-content: center;">Motapa Mapo Yantra</h1>
+    <div class="main">
+    <div class="themeDiv centered" ><button id="theme" class="button-81" role="button">Dark Mode</button></div>
+    <div class="ageDiv centered">
         <tr>
             <td>Age</td>
-            <td><input id="age" type="text" placeholder="25"> age(2-100)</td>
+            <td class="brutalist-container"><input class="brutalist-input smooth-type" id="age" type="text" placeholder="25">     age(2-100)</td>
         </tr>
     </div>
-    <div>
+    <div class="genDiv centered">
         <tr>
-            <td>Gender</td>
+            <td>Gender:</td>
             <td> Male <input  type="radio" name="Gender"/></td>
-            <td> Female <input  type="radio" name="Gender"/></td>
+            <td> /Female <input  type="radio" name="Gender"/></td>
         </tr>
     </div>
-    <div>
+    <div class="htDiv centered">
         <tr>
             <td>Height</td>
-            <td><input id="ht" type="text" placeholder="180 cm"/></td>
+            <td class="brutalist-container"><input class="brutalist-input smooth-type" id="ht" type="text" placeholder="180 cm"/></td>
         </tr>
     </div>
-    <div>
+    <div class="wtDiv centered">
         <tr>
             <td>Weight</td>
-            <td><input id="wt" type="text" placeholder="55 kg"></td>
+            <td class="brutalist-container"><input class="brutalist-input smooth-type" id="wt" type="text" placeholder="55 kg"></td>
         </tr>
     </div>
-    <div>
-        <button id="calc">Calculate</button>
-        <button id="clear">Clear</button>
+    <div class="btnDiv centered">
+        <button class="button-81" role="button" id="calc">Calculate</button>
+        <button class="button-81" role="button" id="clear">Clear</button>
     </div>
     <div id="result"></div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

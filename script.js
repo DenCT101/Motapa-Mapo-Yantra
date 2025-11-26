@@ -4,7 +4,12 @@ const height = document.getElementById('ht');
 const weight = document.getElementById('wt');
 const result = document.getElementById('result');
 const age = document.getElementById('age');
+const theme = document.getElementById('theme');
 const radiobtn = document.getElementsByName('Gender')
+function changebg(color){
+    document.body.style.backgroundColor = color;
+}
+
 calcbtn.addEventListener("click",()=>{
     const heightVal = parseFloat(height.value);
     const weightVal = parseFloat(weight.value);
@@ -33,4 +38,16 @@ clearbtn.addEventListener("click",()=>{
     weight.value = "";
     age.value = "";
     result.textContent = "";
+})
+
+theme.addEventListener("click",()=>{
+    currentcolor = document.body.style.backgroundColor;
+    if(!currentcolor||currentcolor=='white'){
+        changebg('grey');
+        theme.innerText = 'Light Mode'
+    }
+    else{
+        changebg('white')
+        theme.innerText = 'Dark Mode'
+    }
 })
